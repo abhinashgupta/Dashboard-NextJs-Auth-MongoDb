@@ -9,8 +9,8 @@ connect();
 export async function POST(request: NextRequest) {
   try {
     const reqBody = await request.json();
-      const { email, password } = reqBody;
-      
+    const { email, password } = reqBody;
+
     const user = await User.findOne({ email });
 
     if (!user) {
@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
         { error: "Invalid credentials" },
         { status: 401 }
       );
-      }
+    }
 
     const tokenData = {
       id: user._id,
