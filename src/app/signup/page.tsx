@@ -57,6 +57,7 @@ export default function SignupPage() {
                 Username
               </label>
               <input
+                className="placeholder:text-[#959ead] text-dark-hard mt-3 rounded-lg px-3 py-4 font-semibold block outline-none border"
                 type="username"
                 id="username"
                 value={user.username}
@@ -73,6 +74,7 @@ export default function SignupPage() {
                 Email
               </label>
               <input
+                className="placeholder:text-[#959ead] text-dark-hard mt-3 rounded-lg px-3 py-4 font-semibold block outline-none border"
                 type="email"
                 id="email"
                 value={user.email}
@@ -89,6 +91,7 @@ export default function SignupPage() {
                 Password
               </label>
               <input
+                className="placeholder:text-[#959ead] text-dark-hard mt-3 rounded-lg px-3 py-4 font-semibold block outline-none border"
                 type="password"
                 id="password"
                 value={user.password}

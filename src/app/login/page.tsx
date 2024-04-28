@@ -46,7 +46,6 @@ export default function LoginPage() {
             Log IN
           </h1>
           <form>
-
             <div className="flex flex-col mb-6 w-full">
               <label
                 htmlFor="email"
@@ -55,6 +54,7 @@ export default function LoginPage() {
                 Email
               </label>
               <input
+                className="placeholder:text-[#959ead] text-dark-hard mt-3 rounded-lg px-3 py-4 font-semibold block outline-none border"
                 type="email"
                 id="email"
                 value={user.email}
@@ -71,6 +71,7 @@ export default function LoginPage() {
                 Password
               </label>
               <input
+                className="placeholder:text-[#959ead] text-dark-hard mt-3 rounded-lg px-3 py-4 font-semibold block outline-none border"
                 type="password"
                 id="password"
                 value={user.password}
