@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 import bcryptjs from "bcryptjs";
 import { sendMail } from "@/utils/mailsend";
 
-connect()
+connect();
 
 export async function POST(request: NextRequest) {
   try {
@@ -33,15 +33,20 @@ export async function POST(request: NextRequest) {
     const savedUser = await newUser.save();
     console.log(savedUser);
 
-    //Send verification Email
-      await sendMail({ email, emailType: "Verify", userId: savedUser._id });
-      
-      return NextResponse.json({
-          message: "User registered successfully",
-          success: true, 
-          savedUser
-      })
-  } catch (error: any) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    // Send verification Email
+    const userId = savedUser._id;
+    await sendMail({ email, emailType: "VERIFY", userId });
+
+    return NextResponse.json({
+      message: "User registered successfully",
+      success: true,
+      savedUser,
+    });
+  } catch (error) {
+    console.error(error);
+    return NextResponse.json(
+      { error: "An error occurred while processing your request" },
+      { status: 500 }
+    );
   }
 }
