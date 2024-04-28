@@ -108,7 +108,7 @@ export default function SignupPage() {
 
             <p className="text-sm font-semibold text-[#5a7184]">
               Already Registered?{" "}
-              <Link href="/register" className="text-primary">
+              <Link href="/login" className="text-primary">
                 Login
               </Link>
             </p>

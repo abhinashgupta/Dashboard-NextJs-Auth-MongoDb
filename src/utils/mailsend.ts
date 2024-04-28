@@ -38,11 +38,11 @@ export const sendMail = async ({ email, emailType, userId }: any) => {
         emailType === "VERIFY" ? "Verify your email" : "Reset your password",
       html: `<p>Click <a href="${
         process.env.DOMAIN
-      }/verifyemail?token=${hashedToken}">Here</a> to ${
+      }/verifyeMail?token=${hashedToken}">Here</a> to ${
         emailType === "VERIFY" ? "verify your email" : "reset your password"
       } or copy and paste the link below in your browser.<br>${
         process.env.DOMAIN
-      }/verifyemail?token=${hashedToken}</p>`,
+      }/verifyEmail?token=${hashedToken}</p>`,
     };
 
     const mailResponse = await transporter.sendMail(mailOptions);
