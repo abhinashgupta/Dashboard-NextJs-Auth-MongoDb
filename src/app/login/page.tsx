@@ -20,7 +20,7 @@ export default function LoginPage() {
     event.preventDefault();
     try {
       setLoading(true);
-      const response = await axios.post('/api/User/login', user);
+      const response = await axios.post('/api/login', user);
       console.log("Login success", response.data);
       router.push("/profile");
     } catch (error: any) {
