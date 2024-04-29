@@ -1,4 +1,5 @@
 "use client"
+import Image from "next/image";
 import { signOut, useSession } from "next-auth/react";
 import React, { useState } from "react";
 import { Button } from "../ui/button";
@@ -69,9 +70,11 @@ const Header = ({ handleHam, openHam }: any) => {
           {/* Profile Icon */}
           <div className="flex items-center relative ml-4">
             <div className="mr-4">
-              <img
-                src="https://play-lh.googleusercontent.com/C9CAt9tZr8SSi4zKCxhQc9v4I6AOTqRmnLchsu1wVDQL0gsQ3fmbCVgQmOVM1zPru8UH"
+              <Image
+                src="/profilePic.avif"
                 alt="Profile"
+                width={50}
+                height={50}
                 className="w-10 h-10 rounded-full"
               />
             </div>
