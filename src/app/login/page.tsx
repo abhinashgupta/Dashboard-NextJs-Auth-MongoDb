@@ -90,7 +90,7 @@ export default function LoginPage() {
             </button>
 
             <p className="text-sm font-semibold text-[#5a7184]">
-              Don't have account?{" "}
+              Don&apos;t have an account?{" "}
               <Link href="/signup" className="text-primary">
                 Sign Up
               </Link>
