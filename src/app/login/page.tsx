@@ -14,12 +14,13 @@ export default function LoginPage() {
 
   const [buttonDisabled, setButtonDisabled] = useState(false);
   const [loading, setLoading] = useState(false);
+  
 
   const onLogin = async (event: any) => {
     event.preventDefault();
     try {
       setLoading(true);
-      const response = await axios.post("/api/user/login", user);
+      const response = await axios.post(`/api/user/login`, user);
       console.log("Login success", response.data);
       router.push("/profile");
     } catch (error: any) {
