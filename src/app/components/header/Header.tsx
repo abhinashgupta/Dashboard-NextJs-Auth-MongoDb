@@ -36,7 +36,7 @@ const Header = ({ handleHam, openHam }: any) => {
 
     const logout = async () => {
       try {
-        await axios.get("/api/user/logout");
+        await axios.get("/api/User/logout");
         toast.success("Logout successful");
         router.push("/login");
       } catch (error) {
