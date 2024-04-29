@@ -10,7 +10,7 @@ import {
 
 const RecentActivity = () => {
   return (
-    <div className="text-white pt-6">
+    <div className="text-white pt-6 mb-7">
       <Card
         x-chunk="dashboard-05-chunk-1"
         className="lg:w-[480px] lg:h-full sm:w-[250px] sm:h-full w-full h-full bg-[#161E54] overflow-hidden"
